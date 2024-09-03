@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Friv-Game</title>
+
+    
+</head>
+
+
+<body>
+
+    <div style="color: blueviolet;" id="game-container">
+        <iframe id="game-frame"
+                marginwidth="0" 
+                marginheight="0" 
+                frameborder="0" 
+                scrolling="no" 
+                width="900" 
+                height="490" 
+                allow="autoplay; fullscreen" 
+                allowfullscreen="">
+        </iframe>
+
+        
+    </div>
+
+
+
+
+    <script>
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const game = urlParams.get('game');
+
+
+        let gameUrl = '';
+        let gameWidth = 900; 
+        let gameHeight = 490;  
+
+
+
+        if (game === 'garfield') {
+            gameUrl = 'https://www.gameflare.com/embed/garfield-s-scary-scavenger-hunt/';
+        } 
+        else if (game === 'hount-the-house') {
+            gameUrl = 'https://www.gameflare.com/embed/haunt-the-house/';
+        }
+        else if (game === 'jack-smith') {
+            gameUrl = 'https://www.gameflare.com/embed/jacksmith/';
+        }
+        else if (game === 'power-pamplona') {
+            gameUrl = 'https://www.gameflare.com/embed/power-pamplona/';
+        }
+        else if (game === 'crazy-penguin') {
+            gameUrl = 'https://www.gameflare.com/embed/crazy-penguin-catapult/';
+        }
+        else if (game === 'ninja-turtule') {
+            gameUrl = 'https://www.gameflare.com/embed/ninja-turtles-monsters-vs-mutants/';
+        }
+        else if (game === 'can-you-pet') {
+            gameUrl = 'https://www.gameflare.com/embed/can-your-pet/';
+        }
+        else if (game === 'snooring-2') {
+            gameUrl = 'https://www.gameflare.com/embed/snoring-2-wild-west/';
+        }
+        else if (game === 'papa-scooparia') {
+            gameUrl = 'https://www.gameflare.com/embed/papas-scooperia/';
+        }
+        else if (game === 'Audreys-Glamorous') {
+            gameUrl = 'https://www.gameflare.com/embed/audreys-glamorous-real-haircuts/';
+        }
+        else if (game === 'flappy-bird') {
+            gameUrl = 'https://www.gameflare.com/embed/flappy-bird-online/';
+        }
+        else if (game === 'Rogue-Soul') {
+            gameUrl = 'https://www.gameflare.com/embed/rogue-soul/';
+            gameWidth = 620; 
+            gameHeight = 500 ;
+        }
+        else if (game === 'Cactus-McCoy') {
+            gameUrl = 'https://www.gameflare.com/embed/cactus-mccoy/';
+            gameWidth = 550; 
+            gameHeight = 500 ;
+        }
+        else if (game === 'age-of-war') {
+            gameUrl = 'https://www.gameflare.com/embed/age-of-war/';
+        }
+        else if (game === 'Shopaholic-Hollywood') {
+            gameUrl = 'https://www.gameflare.com/embed/shopaholic-hollywood/';
+        }
+        else if (game === 'bob-rober') {
+            gameUrl = 'https://www.gameflare.com/embed/bob-the-robber/';
+        }
+        else if (game === 'Moto-X3M') {
+            gameUrl = 'https://www.gameflare.com/embed/moto-x3m/';
+        }
+        else if (game === 'Milk-Quest') {
+            gameUrl = 'https://www.gameflare.com/embed/milk-quest/';
+            gameWidth = 600; 
+            gameHeight = 500 ;
+
+        }
+        else if (game === 'Ball-Hero') {
+            gameUrl = 'https://www.gameflare.com/embed/ball-hero-adventure-red-bounce-ball/';
+        }
+        else if (game === 'My-Dolphin') {
+            gameUrl = 'https://www.gameflare.com/embed/my-dolphin-show-christmas-edition/';
+        }
+        else if (game === 'Home-Sheep') {
+            gameUrl = 'https://www.gameflare.com/embed/home-sheep-home-2/';
+            gameWidth = 600; 
+            gameHeight = 500 ;
+
+        }
+        else if (game === 'Stealing-Diamond') {
+            gameUrl = 'https://www.gameflare.com/embed/stealing-the-diamond/';
+            gameWidth = 650; 
+            gameHeight = 445 ;
+
+        }
+        else if (game === 'ice-cream') {
+            gameUrl = 'https://www.gameflare.com/embed/bad-ice-cream/';
+            gameWidth = 480; 
+            gameHeight = 500 ;
+        }
+        else if (game === 'Truck-Loader') {
+            gameUrl = 'https://www.gameflare.com/embed/truck-loader-5/';
+            gameWidth = 600; 
+            gameHeight = 435 ;
+        }
+        else if (game === 'Death-Chase') {
+            gameUrl = 'https://www.gameflare.com/embed/death-chase/';
+            gameWidth = 800; 
+            gameHeight = 550 ;
+        }
+        else if (game === 'Neil') {
+            gameUrl = 'https://www.gameflare.com/embed/neil-the-nail/';
+            gameWidth = 640; 
+            gameHeight = 515 ;
+        }
+        else if (game === 'Cuboy-Quest') {
+            gameUrl = 'https://www.gameflare.com/embed/cuboy-quest-2/';
+            gameWidth = 640; 
+            gameHeight = 515 ;
+        }
+        else if (game === 'Last-Stand') {
+            gameUrl = 'https://www.gameflare.com/embed/strike-force-kitty-last-stand/';
+            gameWidth = 650; 
+            gameHeight = 500 ;
+        }
+        else if (game === 'Papa-Pizzeria') {
+            gameUrl = 'https://www.gameflare.com/embed/papa-s-pizzeria/';
+            gameWidth = 650; 
+            gameHeight = 500 ;
+        }
+        else if (game === 'Clash of Armour') {
+            gameUrl = 'https://www.gameflare.com/embed/clash-of-armour/';
+            gameWidth = 700; 
+            gameHeight = 450 ;
+        }
+        else if (game === 'Snail-Bob') {
+            gameUrl = 'https://www.gameflare.com/embed/snail-bob/';
+            gameWidth = 550; 
+            gameHeight = 450 ;
+        }
+        else if (game === 'Undead Neighbor') {
+            gameUrl = 'https://www.gameflare.com/embed/my-undead-neighbors/';
+            gameWidth = 550; 
+            gameHeight = 430 ;
+        }
+        else if (game === 'Save The Dog') {
+            gameUrl = 'https://www.gameflare.com/embed/save-the-dog/';
+            gameWidth = 700; 
+            gameHeight = 400 ;
+        }
+        else if (game === 'Penguin Diner 2') {
+            gameUrl = 'https://www.gameflare.com/embed/penguin-diner/';
+            gameWidth = 800; 
+            gameHeight = 500 ;
+        }
+        else if (game === 'Bratz Makeover Game') {
+            gameUrl = 'https://www.gameflare.com/embed/bratz-makeover-game/';
+            gameWidth = 700; 
+            gameHeight = 485 ;
+        }
+        else if (game === 'Bartender The Celeb Mix') {
+            gameUrl = 'https://www.gameflare.com/embed/bartender-the-celeb-mix/';
+            gameWidth = 700; 
+            gameHeight = 485 ;
+        }
+        else if (game === 'cactus-mccoy-2') {
+            gameUrl = 'https://www.gameflare.com/embed/cactus-mccoy-2/';
+            gameWidth = 550; 
+            gameHeight = 500 ;
+        }
+        else if (game === 'Sky Serpents') {
+            gameUrl = 'https://www.gameflare.com/embed/sky-serpents/';
+            gameWidth = 500; 
+            gameHeight = 650 ;
+        }
+
+
+
+
+        document.getElementById('game-frame').src = gameUrl;
+        document.getElementById('game-frame').width = gameWidth;
+        document.getElementById('game-frame').height = gameHeight;
+    </script>
+
+
+
+    <script src="friv.js"></script>
+</body>
+</html>
